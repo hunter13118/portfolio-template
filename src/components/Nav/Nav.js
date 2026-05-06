@@ -4,7 +4,7 @@ import './nav.scss'
 const Nav = () => (
    <nav className="nav-container">
       <NavLink to="/" className="logo">
-         s.moen
+         your.name
       </NavLink>
 
       <div className="nav-links">

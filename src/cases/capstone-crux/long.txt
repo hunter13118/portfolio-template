@@ -1,1 +1,0 @@
-Crux helps climbers discover, rate, and share climbing routes. Built as a capstone project showcasing full-stack development with real-time data and social features.

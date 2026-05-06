@@ -1,0 +1,1 @@
+A modern analytics dashboard providing real-time insights, automated reporting, and intuitive data visualization for business stakeholders.

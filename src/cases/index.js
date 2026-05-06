@@ -1,16 +1,16 @@
 // AUTO-GENERATED — do not edit manually. Run "npm run generate" to regenerate.
-import capstoneCrux from './capstone-crux/meta';
-import nobookKeeping from './nobook-keeping/meta';
-import unionSquare from './union-square/meta';
-import unlockHealth from './unlock-health/meta';
-import varsityTutors from './varsity-tutors/meta';
+import projectAlpha from './project-alpha/meta';
+import projectBeta from './project-beta/meta';
+import projectDelta from './project-delta/meta';
+import projectEpsilon from './project-epsilon/meta';
+import projectGamma from './project-gamma/meta';
 
 const cases = [
-  capstoneCrux,
-  nobookKeeping,
-  unionSquare,
-  unlockHealth,
-  varsityTutors,
+  projectAlpha,
+  projectBeta,
+  projectDelta,
+  projectEpsilon,
+  projectGamma,
 ];
 
 export default cases;
