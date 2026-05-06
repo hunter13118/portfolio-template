@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import './reset.css';
+import './App.scss';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import CaseStudy from './components/CaseStudy/CaseStudy';
+import CaseStudyPage from './components/CaseStudyPage/CaseStudyPage';
+import Nav from './components/Nav/Nav';
+import cases from './cases';
 
-function App() {
+
+function Portfolio() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Nav />
+      <Routes>
+        <Route path="/" element={
+          <div className="caseStudys">
+            {cases.map((caseData, index) => (
+              <CaseStudy key={index} slotIndex={index} caseData={caseData}/>
+            ))}
+          </div>
+        } />
+        <Route path="/case/:slug" element={<CaseStudyPage />} />
+        <Route path="/about" element={<div className="about-page"><h1>About</h1><p className="p1">Coming soon.</p></div>} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
-export default App;
+export default Portfolio;

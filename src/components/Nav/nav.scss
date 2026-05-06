@@ -1,0 +1,39 @@
+@use "../universal.scss";
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-md-lg);
+  margin-bottom: var(--space-xl);
+}
+
+.logo {
+  font-family: "SpaceMonoReg";
+  font-size: 1rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-links {
+  display: flex;
+  gap: var(--space-lg);
+
+  a {
+    font-family: "SpaceMonoReg";
+    font-size: 1rem;
+    text-decoration: none;
+    color: inherit;
+    opacity: 0.5;
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &.active {
+      opacity: 1;
+      text-decoration: underline;
+    }
+  }
+}

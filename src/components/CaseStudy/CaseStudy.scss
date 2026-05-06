@@ -1,0 +1,149 @@
+@use "../universal.scss";
+
+.square-img{
+  display: block;
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+
+.img-sm{
+    grid-column: span 3;
+}
+
+.img-md{
+  grid-column: span 5;
+  
+}
+
+.img-lg{
+  grid-column: span 6;
+}
+
+.img-lg-last{
+    grid-column: 3 / span 6;
+}
+
+.img-full{
+  grid-column: span 8;
+}
+
+.text-container{
+  width: 100%;
+  display: flex;
+
+  grid-column: span 8;
+}
+
+.title-holder{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.button{
+  font-size: 1rem;
+  line-height: 1.375rem;
+  font-family: "SpaceMonoReg";
+
+  margin-left: 1rem;
+  padding: var(--space-sm);
+  grid-column: col-end;
+}
+
+/* TABLET STYLES ////////////////////////////////////////////////////////////////////////////////////////////////*/
+@media only screen and (min-width: 768px){
+  .container{
+    padding-left: var(--space-md);
+    padding-right: var(--space-md);
+
+    margin-bottom: var(--space-xl);
+  }
+
+  .container-grid{
+    display: grid;
+
+    max-width: 984px;
+    grid-template-columns: repeat(12, 1fr);
+
+    gap: 1rem;
+  }
+
+  .img-sm{
+    grid-column: span 3;
+  }
+
+  .img-md{
+    grid-column: span 4;
+    
+  }
+
+  .img-lg , .img-lg-last , .img-full , .text-container{
+    grid-column: span 5;
+  }
+
+  .title-holder{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    padding-top: var(--space-xs);
+  }
+
+  .button{
+    font-size: 1rem;
+    line-height: 1.375rem;
+    font-family: "SpaceMonoReg";
+
+    margin-left: 1rem;
+    padding: var(--space-xs);
+    grid-column: col-end;
+  }
+
+  .reverse-order{
+    .square-img{
+      order: 1;
+    }
+  }
+
+  .single-img{
+    .text-container{
+      grid-column: span 7;
+    }
+  }
+}
+
+/* DESKTOP STYLES ////////////////////////////////////////////////////////////////////////////////////////////////*/
+@media only screen and (min-width: 1025px){
+  html{
+    font-size: 20px;
+  }
+
+  .container{
+    padding-left: var(--space-xxl-lg);
+    padding-right: var(--space-xxl-lg);
+
+    margin-bottom: var(--space-xl);
+  }
+
+  .container-grid{
+    display: grid;
+
+    max-width: 100%;
+
+    gap: 1rem;
+  }
+}
+
+
+/*large screen/////////////////////////////////////////////////////////////////////////////*/
+@media only screen and (min-width: 1440px){
+  .container-grid{
+    display: grid;
+
+    max-width: 1800px;
+
+    gap: 1rem;
+  }
+}
+

@@ -1,0 +1,1 @@
+A bookkeeping web application for small businesses.
